@@ -2,9 +2,7 @@ print("-------------PRINT THE JOKE---------------")
 
 import json
 import urllib.request as urllib
-
 import os, glob
-
 
 def print_joke():
     url = "http://api.icndb.com/jokes/random"
@@ -15,10 +13,8 @@ def print_joke():
     print(data['value'])
     print("\t" + data['value']['joke'])
 
-
 # wypisanie domyslnie jednego zartu
 print_joke()
-
 
 def work():
     decision = "t"
@@ -26,14 +22,13 @@ def work():
         print_joke()
         print("czy chcesz przeczytac kolejny zart? (t/n)")
         decision = input()
-
-
+        
 print("nie to nie")
-
 work()
 
-print("-------------COUNT CHARACTERS IN WORD---------------")
 
+
+print("-------------COUNT CHARACTERS IN WORD---------------")
 
 def count_letter(word):
     letter_occur = {}
@@ -50,7 +45,6 @@ def count_letter(word):
 
 print("-------CEZAR'S CIPHER-------")
 
-
 def cezar_encrypt(text):
     encrypted = ""
     for letter in text:
@@ -62,13 +56,13 @@ def cezar_encrypt(text):
 
     return encrypted
 
-
 print(cezar_encrypt("zebra"))
+
+
 
 print("-------BUBBLE SORT-------")
 
 list = [9, 2, 5, 7, 3, 7, 1]
-
 
 def bubble_sort(list):
     sorted = False
@@ -83,16 +77,16 @@ def bubble_sort(list):
                 list[i + 1] = temp
                 sorted = False
 
-
 print(list)
 bubble_sort(list)
 print(list)
+
+
 
 print("--------SUMA LICZB LISTY---------")
 
 list2 = [2, 2, 7, 1]
 list3 = [2, 1, 1, 1]
-
 
 def suma_liczb(list2):
     start = 0
@@ -100,14 +94,14 @@ def suma_liczb(list2):
         start = start + i
     return start
 
-
 wynik = suma_liczb(list2)
 print(wynik)
+
+
 
 print("--------SUMA LICZB PARZYSTYCH LISTY---------")
 
 list4 = [2, 2, 7, 1, 6, 7, 2, 4]
-
 
 def suma_parz(list4):
     start = 0  # to znaczy ze 0 jest przypisane do zmiennej start?
@@ -116,19 +110,18 @@ def suma_parz(list4):
             start = start + 1
     return start
 
-
 wynik = suma_parz(list4)
 print(wynik)
 
-print("--------GENEROWANIE LISTY---------")
 
+
+print("--------GENEROWANIE LISTY---------")
 
 def generuj_liste(n):
     lista = []
     for x in range(n):
         lista.append(x)
     return lista
-
 
 wynik = generuj_liste(12)
 print(wynik)
@@ -139,10 +132,11 @@ print(wynik.sort())
 
 generuj_liste(15)
 
+
+
 print("-------LIST OF FIRST FIBONACCI NUMBERS-------")
 
 n = 6
-
 
 def fibonacci(n):
     # first character of chain
@@ -153,21 +147,18 @@ def fibonacci(n):
     if n >= 2:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-
 print(fibonacci(n))
-
 
 def fibonacci_sequence(n):
     lista = []
     for i in range(n):
         print(str(i) + ": " + str(fibonacci(i)))
 
-
 fibonacci_sequence(10)
 
+
+
 print("---------------SQUARE POWER/POTEGA----------------")
-
-
 # REKURENCJA -POTĘGA a^3 = a * a^2
 
 def potega(a, n):
@@ -176,8 +167,9 @@ def potega(a, n):
     else:
         return a * potega(a, n - 1)
 
-
 print(potega(2, 3))
+
+
 
 print("-------------FIZZBUZZ---------------")
 
@@ -194,8 +186,9 @@ for num in range(1, 101):
 result = count_letter("DOMINI__KANA")
 print(result)
 
-print("-------------KOSMETYCZKA---------------")
 
+
+print("-------------KOSMETYCZKA---------------")
 
 class Kosmetyczka:
     def __init__(self):
@@ -222,7 +215,6 @@ class Kosmetyczka:
     def add_cosmetic(self, kosmetyk):
         self.lista_kosmetykow.append(kosmetyk)
 
-
 class Kosmetyk():
     def __init__(self, name):
         self.name = name
@@ -231,19 +223,16 @@ class Kosmetyk():
     def __str__(self):
         return "Nazwa: " + self.name
 
-
 class Puder(Kosmetyk):
     def __init__(self):
         print("Jestem w konsrtuktorze Puder")
         super().__init__("Puder Dior")
         print("Jestem w klasie Puder")
 
-
 class Szminka(Kosmetyk):
     def __init__(self):
         super().__init__("Szminka Head'n Shoulders")
         print("Jestem w klasie Szminka")
-
 
 kosmetyczka = Kosmetyczka()
 kosmetyczka.list_cosmetics()
@@ -265,6 +254,8 @@ try:
 except Exception as e:
     print("wyjatek typu Exception, wiadoimosc: " + str(e))
 
+    
+    
 print("-------------PCC 2-7.STRIPPING NAMES---------------")
 # Page 29. Store a pearson's name...
 
@@ -275,6 +266,8 @@ print(name)
 print(name.lstrip())
 print(name.rstrip())
 print(name.strip())
+
+
 
 print("-------------PCC 2-9.FAVORITE NUMBERS---------------")
 # Page 33. Store youe favourite number in a variable...
